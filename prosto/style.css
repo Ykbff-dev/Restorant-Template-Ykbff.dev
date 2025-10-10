@@ -669,3 +669,252 @@ body {
 
 
 
+.portfolio-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 1100px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.portfolio-image {
+    flex: 1 1 500px;
+}
+
+.portfolio-image img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    margin-left: 50px;
+}
+
+.portfolio-content {
+    flex: 1 1 500px;
+    padding: 40px;
+}
+
+.portfolio-content h4 {
+    color: #1abc9c;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.portfolio-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-content h3 {
+    font-weight: 500;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.portfolio-content p {
+    line-height: 1.6;
+    color: #bbb;
+    margin-bottom: 25px;
+
+}
+
+.portfolio-content .btn {
+    background: #1abc9c;
+    border: none;
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.portfolio-content .btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.portfolio-content .btn:hover {
+    background: #16a085;
+}
+
+.quote {
+    font-style: italic;
+    color: #ccc;
+    margin-top: 25px;
+    font-family: sans-serif;
+}
+
+.quote span {
+    display: block;
+    margin-top: 10px;
+    color: #1abc9c;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.arrow {
+    position: absolute;
+    font-size: 1.8rem;
+    color: #fff;
+    top: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 100px;
+
+}
+
+
+
+.arrow.left {
+    left: 5px;
+}
+
+.arrow.right {
+    right: 5px;
+}
+
+@media(max-width: 900px) {
+    .portfolio-card {
+        flex-direction: column;
+    }
+
+    .portfolio-content {
+        padding: 25px;
+    }
+
+    .portfolio-content h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+/* i skills */
+
+.skillsss {
+    background: #0e0d15;
+    max-width: 1900px;
+    padding: 40px;
+}
+
+
+
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.technical-skills {
+    flex: 1;
+    min-width: 300px;
+}
+
+.technical-skills h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-bar p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.bar {
+    background: #444;
+    height: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar .fill {
+    background: #1abc9c;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.professional-skills {
+    flex: 1;
+    min-width: 300px;
+}
+
+.professional-skills h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.circle-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.circle {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    top: 50px;
+}
+
+.circle svg {
+    width: 140px;
+    height: 140px;
+    transform: rotate(-90deg);
+}
+
+.circle svg circle {
+    fill: none;
+    stroke: #333;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.circle svg circle:nth-child(2) {
+    stroke: #1abc9c;
+    stroke-dasharray: 408;
+    stroke-dashoffset: calc(408 - (408 * var(--percent)) / 100);
+    transition: stroke-dashoffset 1s ease;
+}
+
+.circle .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.circle .number h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.circle .number p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
